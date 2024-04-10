@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+
+<h1>hi show</h1>
+
+{% for stu in allstudent %}
+<ul>
+
+<li>{{stu}}
+    <a class = "btn btn-success" href="{% url 'student1:update' stu.pk %}" role="button">Update</a>
+    <a class = "btn btn-danger" href="{% url 'student1:delete' stu.pk %}" role="button">Delete</a>
+</li>
+</ul>
+{% endfor %}
+
+{% endblock 'content' %}

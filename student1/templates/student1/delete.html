@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+
+<h1>hi delete</h1>
+<div class = "container ">
+<form action="" method = "POST">
+    {% csrf_token %}
+   <h2>Are you sure you want to delete - {{student.stuname}}</h2>
+   <button type = "submit" class = "btn btn-warning">Delete</button>
+</form>
+</div>
+{% endblock 'content' %}
+

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+<h1>Enter Your Information For Student Details</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="stuname" class="form-label">Student Name : </label>
+      <input type="text" class="form-control" id="stuname" name="stuname" aria-describedby="emailHelp">
+      {% comment %} <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> {% endcomment %}
+    </div>
+    <div class="mb-3">
+      <label for="stuage" class="form-label">Student Age : </label>
+      <input type="number" class="form-control" id="stuage" name="stuage" >
+    </div>
+    <div class="mb-3">
+        <label for="sturno" class="form-label">Student Roll Number :</label>
+        <input type="number" class="form-control" id="sturno" name="sturno">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock 'content' %}
